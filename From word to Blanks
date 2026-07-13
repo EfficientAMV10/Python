@@ -1,9 +1,9 @@
-import random
-words = ["Bueno","Nariz","Cabeza","Ojo"]
-random_L = random.choice(words)
-largo = len(random_L)
-agregar = ""
-for x in range(largo):
-    agregar +="_"
-print(agregar)
-print(random_L)
+import random # defined random 
+words = ["Bueno","Nariz","Cabeza","Ojo"] #add a list of words, whatever you want
+random_L = random.choice(words) # chooses a random word from list
+largo = len(random_L) # count each letter from chosen random word
+agregar = "" #here it acumulets the blanks _
+for x in range(largo): #Here you create the blanks from the lengt of the chosen word
+    agregar +="_" #it adds the blanks
+print(agregar) #Shows the blanks
+print(random_L) #Shows the chosen word
