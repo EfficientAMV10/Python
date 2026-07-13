@@ -1,2 +1,2 @@
 # Python
-different python projects 
+These projects are based on the 100 Days of code, The complete python course by Dr. Angale Yu.
