@@ -1,0 +1,9 @@
+import random
+words = ["Bueno","Nariz","Cabeza","Ojo"]
+random_L = random.choice(words)
+largo = len(random_L)
+agregar = ""
+for x in range(largo):
+    agregar +="_"
+print(agregar)
+print(random_L)
