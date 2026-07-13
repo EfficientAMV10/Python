@@ -1,0 +1,108 @@
+import random
+
+#Lista de palabras con seleccion random
+Palabras = random.choice(["sol","carro","mecanico","aventura","felicidad","azucar","planta","programa","taco","aeropuerto","urgente","ingenieria","humildad","ruta","empleo"])
+#Pone los guiones bajos conforme a las letras de la palabra
+Blanks = ["_"] * len(Palabras)
+#Agrega los espacios en Blanks
+print(" ".join(Blanks))
+#Vidas del usuario
+Vidas = 6
+
+
+while Vidas > 0 and "_" in Blanks:
+    #Input de la letra
+    letter = input("Write a letter: ").lower()
+    if letter in Palabras:
+      for i in range(len(Palabras)):
+          if Palabras[i] == letter:
+             Blanks[i] = letter
+             print(" ".join(Blanks))
+
+    else:
+            Vidas -=1
+            print(f"Fallaste, Vidas: {Vidas}")
+            print(" ".join(Blanks))
+            if Vidas == 5:
+              print(r'''
+    _______
+    |/      |
+    |      (_)
+    |
+    |
+    |
+   _|___
+
+
+
+                 ''' )
+            if Vidas == 4:
+                print(r'''
+     _______
+     |/      |
+     |      (_)
+     |       |
+     |
+     |
+     |
+    _|___
+
+                 ''')
+            if Vidas == 3:
+                print(r'''
+     _______
+     |/      |
+     |      (_)
+     |       |
+     |       |
+     |        \
+     |
+    _|___
+
+                    ''')
+            if Vidas == 2:
+                print(r'''
+      _______
+     |/      |
+     |      (_)
+     |       |
+     |       |
+     |      / \
+     |
+    _|___
+
+                      ''')
+
+            if Vidas == 1:
+              print(r'''
+      _______
+     |/      |
+     |      (_)
+     |       |\
+     |       |
+     |      / \
+     |
+    _|___
+
+                    ''')
+            if Vidas == 0:
+              print(r'''
+      _______
+     |/      |
+     |      (_)
+     |      /|\
+     |       |
+     |      / \
+     |
+    _|___
+
+██████╗ ███████╗██████╗ ██████╗ ██╗███████╗████████╗ ███████╗
+██╔══██╗██╔════╝██╔══██╗██╔══██╗██║██╔════╝╚══██╔══╝ ██╔════╝
+██████╔╝█████╗  ██████╔╝██║  ██║██║███████╗   ██║    █████╗
+██╔═══╝ ██╔══╝  ██╔══██╗██║  ██║██║╚════██║   ██║    ██╔══╝
+██║     ███████╗██║  ██║██████╔╝██║███████║   ██║    ███████╗
+╚═╝     ╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝╚══════╝   ╚═╝    ╚══════╝
+                   ''')
+
+
+print("Felicidades, GANASTE!")
