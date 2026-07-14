@@ -1,0 +1,8 @@
+#This code calculates the weeks left you have for living. Base by 90 years
+def life_in_weeks(life):
+    math = 90*52-(life)*52
+    print(f"You have: {math} weeks left, keep going dude.")
+
+life = int(input("What is your age, human? "))
+
+life_in_weeks(life)
