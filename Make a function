@@ -1,0 +1,10 @@
+#Make a function
+def greet():
+    print(f"Hello, {x}") #add the input in the fuction
+    print("How are you?")
+    print("Nice to meet you")
+
+
+x = input("your name? ")
+
+greet() #call the function
