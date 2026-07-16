@@ -1,0 +1,32 @@
+def calculate_love_score(name1,name2):
+    n_1 = name1.lower()
+    n_2 = name2.lower()
+
+    true = ["t","r","u","e"]
+    Love = ["l","o","v","e"]
+
+    true_Count = 0
+    true_Count2 = 0
+    #Compara la variable del for y si es verdadero se suma un uno a Count.
+    for each in n_1:
+        for letter in true:
+            if letter == each:
+                true_Count += 1
+
+        for z in Love:
+            if z == each:
+                true_Count2 +=1
+
+
+    #Pasa lo mismo con el ford de arriba solo que es en name2
+    for each_2 in n_2:
+        for letter_2 in true:
+            if letter_2 == each_2:
+                true_Count += 1  
+
+        for x in Love:
+            if x == each_2:
+                true_Count2 +=1  
+    print(f"Love Score = {true_Count}{true_Count2}")
+
+calculate_love_score(name1 ="Kanye West", name2 = "Kim Kardashian")
