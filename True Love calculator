@@ -7,18 +7,18 @@ def calculate_love_score(name1,name2):
 
     true_Count = 0
     true_Count2 = 0
-    #Compara la variable del for y si es verdadero se suma un uno a Count.
+    #Search for the true list if it matches the each letter of the input.
     for each in n_1:
         for letter in true:
             if letter == each:
                 true_Count += 1
-
+        #Search for the Love list if it matches the each letter of the input.
         for z in Love:
             if z == each:
                 true_Count2 +=1
 
 
-    #Pasa lo mismo con el ford de arriba solo que es en name2
+    #Its the same just compare it with n_2(name2).
     for each_2 in n_2:
         for letter_2 in true:
             if letter_2 == each_2:
