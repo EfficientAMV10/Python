@@ -1,1 +1,29 @@
+#encode = input("Type 'encode' to encrypt, type 'decode' to decrypt" ).lower()
+shift = int(input("type the shift number:\n"))
+message = input("Type your message:\n").lower()
+alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+List = []
+
+def encode(): #Call encode function
+    for each_letter in message: #each letter from the input message saves at each_letter
+        Position = alphabet.index(each_letter) #Gets the position of each letter on the alphabet list
+        Shift_Position = Position + shift #The original position of the list of each letter moves the position by the input number of shift
+        Position_2 = alphabet[Shift_Position] #Now your get the letter been shift
+        List.append(Position_2)#Saves each shift letter in a new and empty list
+    print("".join(List))#Prints the new list with no coma and spaces with join
+
+#encode()
+
+"""
+Position = alphabet.index(message)
+Shift_Position = Position + (shift - 1)
+Position_2 = alphabet[Shift_Position]
+print(Position)
+print(Position_2)
+print(alphabet.index(Position_2))
+"""
+
+
+
+#def decode():
 
