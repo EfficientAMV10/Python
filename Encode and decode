@@ -12,18 +12,17 @@ def encode(): #Call encode function
         List.append(Position_2)#Saves each shift letter in a new and empty list
     print("".join(List))#Prints the new list with no coma and spaces with join
 
-#encode()
+#It does the same as encode but inverted
+def decode():
+    for each_letter in message:
+        Position = alphabet.index(each_letter)
+        Shift_Position = Position - shift
+        Position_2 = alphabet[Shift_Position]
+        List.append(Position_2)
+    print("".join(List))
 
-"""
-Position = alphabet.index(message)
-Shift_Position = Position + (shift - 1)
-Position_2 = alphabet[Shift_Position]
-print(Position)
-print(Position_2)
-print(alphabet.index(Position_2))
-"""
+decode()
+encode()
 
 
-
-#def decode():
 #https://www.onlineide.pro/playground/python
