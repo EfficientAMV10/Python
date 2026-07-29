@@ -1,30 +1,35 @@
-encoder = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n" ).lower()
-shift = int(input("type the shift number:\n"))
-message = input("Type your message:\n").lower()
-alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-List = []
+while True: 
+    encoder = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n" ).lower()
+    shift = int(input("type the shift number:\n"))
+    message = input("Type your message:\n").lower()
+    alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    List = []
 
-def encode(): #Call encode function
-    for each_letter in message: #each letter from the input message saves at each_letter
-        Position = alphabet.index(each_letter) #Gets the position of each letter on the alphabet list
-        Shift_Position = Position + shift #The original position of the list of each letter moves the position by the input number of shift
-        Position_2 = alphabet[Shift_Position] #Now your get the letter been shift
-        List.append(Position_2)#Saves each shift letter in a new and empty list
-    print("".join(List))#Prints the new list with no coma and spaces with join
+    def encode(): #Call encode function
+        for each_letter in message: #each letter from the input message saves at each_letter
+            Position = alphabet.index(each_letter) #Gets the position of each letter on the alphabet list
+            Shift_Position = Position + shift #The original position of the list of each letter moves the position by the input number of shift
+            Position_2 = alphabet[Shift_Position] #Now your get the letter been shift
+            List.append(Position_2)#Saves each shift letter in a new and empty list
+        print("".join(List))#Prints the new list with no coma and spaces with join
 
-#It does the same as encode but inverted
-def decode():
-    for each_letter in message:
-        Position = alphabet.index(each_letter)
-        Shift_Position = Position - shift
-        Position_2 = alphabet[Shift_Position]
-        List.append(Position_2)
-    print("".join(List))
+    #It does the same as encode but inverted
+    def decode():
+        for each_letter in message:
+            Position = alphabet.index(each_letter)
+            Shift_Position = Position - shift
+            Position_2 = alphabet[Shift_Position]
+            List.append(Position_2)
+        print("".join(List))
 
-if encoder == "encode":
-    encode()
-elif encoder == "decode":
-    decode()
+    if encoder == "encode":
+        encode()
+    elif encoder == "decode":
+        decode()
 
+    exit_game = input("You want to try again? Yes or No:\n") 
+    if exit_game.lower() == 'no':
+        print("You type No, bye.")
+        break
 
 #https://www.onlineide.pro/playground/python
