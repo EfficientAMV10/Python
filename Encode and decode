@@ -1,4 +1,4 @@
-#encode = input("Type 'encode' to encrypt, type 'decode' to decrypt" ).lower()
+encoder = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n" ).lower()
 shift = int(input("type the shift number:\n"))
 message = input("Type your message:\n").lower()
 alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
@@ -21,8 +21,10 @@ def decode():
         List.append(Position_2)
     print("".join(List))
 
-decode()
-encode()
+if encoder == "encode":
+    encode()
+elif encoder == "decode":
+    decode()
 
 
 #https://www.onlineide.pro/playground/python
