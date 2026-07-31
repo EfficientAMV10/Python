@@ -2,7 +2,7 @@ while True:
     encoder = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n" )
     shift = int(input("type the shift number:\n"))
     message = input("Type your message:\n").lower()
-    alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    alphabet = [" ","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
     List = []
 
     def encode(): #Call encode function
