@@ -1,0 +1,27 @@
+def encode(): #Call encode function
+    List = ""
+
+    for each_letter in message: #each letter from the input message saves at each_letter
+        if encoder.lower() == "decode":
+            shift *= -1
+            
+
+        Shift_Position = alphabet.index(each_letter) + shift #Gets the position of each letter on the alphabet list and shift it
+        Shift_Position %= len(alphabet) #divided the shift_position with the lenght of alphabetso you wont have error when choosing z and swift it
+        List += alphabet[Shift_Position]#Saves each shift letter in a new and empty list
+    print(List)#Prints the new list with no coma and spaces with join
+    
+while True: 
+    encoder = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n" )
+    shift = int(input("type the shift number:\n"))
+    message = input("Type your message:\n").lower()
+    alphabet = [" ","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+
+
+    encode()
+#Here you ask de user if you want to continue, if not it breaks from the while
+    exit_game = input("You want to try again? Yes or No:\n") 
+    if exit_game.lower() == 'no':
+        print("You type No, bye.")
+        break
+#has some bugs
