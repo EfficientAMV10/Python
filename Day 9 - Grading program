@@ -1,0 +1,48 @@
+student_scores = {
+    'Harry': 88,
+    'Ron': 78,
+    'Hermione': 95,
+    'Draco': 75,
+    'Neville': 60
+}
+
+student_grades ={}
+
+for keys,values in student_scores.items():
+    if values >= 91:
+        student_grades[keys] = "Outstanding"
+    if  81<= values <= 90:
+        student_grades[keys] = "Exceeds Expectations" 
+    if 71 <= values <= 80:
+        student_grades[keys] = "Acceptable"
+    if values<= 70:
+        student_grades[keys] = "Fail"
+print(student_grades)        
+
+
+
+
+
+
+
+"""
+
+This is the scoring criteria: 
+
+- Scores 91 - 100: Grade = "Outstanding" 
+
+- Scores 81 - 90: Grade = "Exceeds Expectations" 
+
+- Scores 71 - 80: Grade = "Acceptable" 
+
+- Scores 70 or lower: Grade = "Fail" 
+
+Ex.
+
+d = {"a": 1, "b": 2, "c": 3}
+
+print(d.keys())      # dict_keys(['a', 'b', 'c'])
+print(d.values())    # dict_values([1, 2, 3])
+print(d.items())     # dict_items([('a', 1), ('b', 2), ('c', 3)])
+
+"""
