@@ -1,0 +1,17 @@
+
+#This is how you can print or select an item from a list in a dictionary
+travel_Log = {
+
+"France": ["Paris","Lille","Dijon"],
+"Germany": ["Stuttgart", "Berlin"],
+
+}
+
+print(travel_Log["France"][1])
+
+#This is how you can select a list on a list
+
+
+Nested_list = ["A","B", ["C","D"]]
+
+print(Nested_list[2][0])
