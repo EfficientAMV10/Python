@@ -1,0 +1,36 @@
+#Here I just add a function, not because it was needed, just because I wanted to practice the function in python.
+def bid():
+    Name_player = input("What is your name? \n")
+    Bid_Price = input("What is your bid?\n")
+    Players_log.update({Name_player:Bid_Price})
+
+print("""\n
+    XXXXXXXXXXXXXXX              
+    X             X              
+    X             X              
+    X             XXXXXXXXXXXXXXX
+    X             X              
+    X             X              
+    XXXXXXXXXXXXXXX              
+                                 
+                                 
+    XXXXXXXXXXXXXXX               
+   XXXXXXXXXXXXXXXXX             
+XXXXXXXXXXXXXXXXXXXXXXX  
+""")
+#It creats an empty dictionary where you can save the inputs 
+Players_log = {}
+while True:
+    bid()    
+
+    again = input("Are there other users who want to bid?\n")
+#It gets out of the While
+    if again.lower() == "no":
+        break
+   #It clears the screen
+    print("\033[H\033[J", end="")   
+
+#It prints a text with the max value of the dictionary in this case the first is the name and the sencond the bid amount.
+print(f"The winner is: {max(Players_log)} with a bid of: {max(Players_log.values())}")
+
+
