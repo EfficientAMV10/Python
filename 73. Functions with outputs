@@ -1,0 +1,12 @@
+#This function gives an output with title form from input.
+def format_name(f_name,l_name):
+   return f_name.title(), l_name.title()
+
+
+#Ask for your first and last name
+#Inputs
+f_name = input("What is your first name?\n")
+l_name =input("What is your last name?\n")
+
+#join helps to get rid of comas 
+print(" ".join(format_name(f_name,l_name)))
