@@ -1,0 +1,33 @@
+# Leap year
+
+#input
+year = int(input("Which year do you want to check? "))
+
+#Arithmetic
+div_4 = year % 4
+div_100 = year % 100
+div_400 = year % 400
+
+#if statements
+if div_4 != 0:
+    print("Not leap year.")
+elif div_100 != 0:
+    print("Leap year.")
+elif div_400 == 0:
+    print("Leap year.")
+else:
+    print("Not leap year.")
+
+#Dr Angela Yu code
+
+if year % 4 == 0:
+    if year % 100 ==0:
+        if year % 400 == 0:
+            print("Leap year.")
+        else:
+            print ("Not leap year.")
+    else: 
+        print("Leap year.")
+else:
+    print("Not leap year.")
+
