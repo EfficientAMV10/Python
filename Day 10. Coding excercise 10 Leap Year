@@ -1,4 +1,6 @@
+#When you write down the function with the """ between this quotetion marks""" you define for what is the purpose of the function.
 def is_leap_year(year):
+"""This function is to let us know if the input is a leap year"""
     # #Arithmetic
     div_4 = year % 4
     div_100 = year % 100
