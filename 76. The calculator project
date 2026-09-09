@@ -12,7 +12,7 @@ def divide(a, b):
 
 
 while True:
-
+    Result = 0
     a = float(input("What's the first number? \n"))
     symbol = input("""Select the operation:
 +
@@ -23,16 +23,21 @@ while True:
     b = float(input("What's the next number? \n"))
 
     if symbol == "+":
+        Result = sum(a,b)
         print(sum(a,b))  
     
     elif symbol == "-":
+        Result = subtract(a,b)
         print(subtract(a,b))
     
     elif symbol == "*":
+        Result = multiply(a,b)
         print(multiply(a,b))
     
     elif symbol == "/":
+        Result = divide(a,b) 
         print(divide)
 
-    input("Type 'y' to continue ")
-#https://www.onlineide.pro/playground/python
+    input(f"Type 'y' to continue with {Result}, or type 'n' to stop. ")
+
+https://www.onlineide.pro/playground/python
