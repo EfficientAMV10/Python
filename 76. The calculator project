@@ -39,7 +39,7 @@ while True:
         
     elif symbol == "/":
         Result = divide(a,b) 
-        print(divide)
+        print(divide(a,b))
 
     next_step = input(f"Type 'y' to continue with {Result}, or type 'n' to stop.\n ").lower()
     if next_step == "n":
