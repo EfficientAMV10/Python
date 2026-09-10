@@ -8,12 +8,14 @@ def multiply(a, b):
     return a * b
 
 def divide(a, b):
+    if b == 0:
+        print("Error: Cannot divide by zero.")
+        return None
     return a / b
-
-
+    
+a = float(input("What's the first number? \n"))
 while True:
-    Result = 0
-    a = float(input("What's the first number? \n"))
+
     symbol = input("""Select the operation:
 +
 -
@@ -24,20 +26,24 @@ while True:
 
     if symbol == "+":
         Result = sum(a,b)
-        print(sum(a,b))  
-    
+        print(sum(a,b))
+            
+        
     elif symbol == "-":
         Result = subtract(a,b)
         print(subtract(a,b))
-    
+        
     elif symbol == "*":
         Result = multiply(a,b)
         print(multiply(a,b))
-    
+        
     elif symbol == "/":
         Result = divide(a,b) 
         print(divide)
 
-    input(f"Type 'y' to continue with {Result}, or type 'n' to stop. ")
+    next_step = input(f"Type 'y' to continue with {Result}, or type 'n' to stop.\n ").lower()
+    if next_step == "n":
+        break
 
-https://www.onlineide.pro/playground/python
+    if next_step == "y":
+        a = Result
