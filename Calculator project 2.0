@@ -1,0 +1,48 @@
+def sum(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
+        print("Error: Cannot divide by zero.")
+        return None
+    return a / b
+    
+
+while True:
+    a = float(input("What's the first number? \n"))
+    symbol = input("""Select the operation:
++
+-
+*
+/
+""")
+    b = float(input("What's the next number? \n"))
+
+    if symbol == "+":
+        Result = sum(a,b)
+        print(sum(a,b))
+            
+        
+    elif symbol == "-":
+        Result = subtract(a,b)
+        print(subtract(a,b))
+        
+    elif symbol == "*":
+        Result = multiply(a,b)
+        print(multiply(a,b))
+        
+    elif symbol == "/":
+        Result = divide(a,b) 
+        print(divide(a,b))
+
+    next_step = input(f"Type 'y' to continue with {Result}, or type 'n' to do a new calculation.\n").lower()
+    if next_step == "n":
+        print("\033[H\033[J", end="") # You clear the screen 
+    if next_step == "y":
+        a = Result
