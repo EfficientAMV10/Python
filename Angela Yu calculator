@@ -1,0 +1,48 @@
+
+#TODO 1: Write the function with the math expresions.
+def Add(a, b):
+    return a + b
+
+def Subtract(a, b):
+    return a - b
+
+def Multiply(a, b):
+    return a * b
+
+def Divide(a, b):
+    if b == 0:
+        print("Error: Cannot divide by zero.")
+        return None
+    return a / b
+    
+#TODO 2: Add these 4 functions in a dictionary. Keys: +, -, *, /
+
+operations = {
+    "+":Add,
+    "-":Subtract,
+    "*":Multiply,
+    "/":Divide,
+}
+
+#TODO 3: Use the dictionary operations to perform the calculations.
+while True:
+    
+    first_Number = float(input("What's the first number? \n"))
+
+    symbol = input("""Select the operation:
+    +
+    -
+    *
+    /
+    """)
+
+    second_Number = float(input("What's the next number? \n"))
+
+    #Aritmetic work
+    Result = operations[symbol](first_Number,second_Number)
+
+    next_step = input(f"Type 'y' to continue with {Result}, or type 'n' to start again.\n").lower()
+    if next_step == "n":
+        print("\033[H\033[J", end="") # You clear the screen 
+    if next_step == "y":
+        first_Number = Result
