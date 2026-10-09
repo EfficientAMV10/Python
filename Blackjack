@@ -1,0 +1,71 @@
+import random
+
+def deal_card():
+    """Returns a random card from the deck"""
+    cards = [11,2,3,4,5,6,7,8,9,10,10,10,10]
+    card =  random.choice(cards) 
+    return card
+
+def calculate_score(a):
+    """Take a list of cardsd and return the score calculated from the cards"""
+    if sum(a) == 21 and len(a) == 2:
+        return 0
+    if 11 in a and sum(a) > 21:
+        a.remove(11)
+        a.append(1)
+
+    return sum(a)
+def compare(u_score, comp_score):
+    if u_score == comp_score:
+        return "Draw"
+    elif comp_score == 0:
+        return "Mr.House has WON." 
+    elif u_score == 0:
+        return "You WIN with a Blackjack!"
+    elif u_score >21:
+        return "You went over 21. Mr.House, WON."
+    elif comp_score > 21:
+        return "Mr.House went over. You WIN."
+    elif u_score > comp_score:
+        return "You WIN."
+    else:
+        return "You LOSE."
+
+def The_game():
+    User_cards = [] 
+    Mr_House_Cards = [] #computer_cards
+    computer_score = -1
+    user_score = -1
+    is_game_over = False      
+
+
+    for _ in range(2):
+        User_cards.append(deal_card())
+        Mr_House_Cards.append(deal_card())
+
+    while not is_game_over:
+        user_score = calculate_score(User_cards)
+        computer_score = calculate_score(Mr_House_Cards)
+
+        print(f"Your cards: {User_cards}, Current score: {user_score}")
+        print(f"Mr.House first card: {Mr_House_Cards[0]}\n")
+
+
+            
+        if User_cards == 0 or Mr_House_Cards == 0 or user_score > 21:
+            is_game_over = True
+        else:
+            user_should_deal = input("Type 'y' to get another card, type 'n' to pass:\n ").lower()
+            if user_should_deal == "y":
+                User_cards.append(deal_card())
+            else:
+                is_game_over = True
+The_game()
+while computer_score != 0 and computer_score < 17:
+    Mr_House_Cards.append(deal_card())
+    computer_score = calculate_score(Mr_House_Cards)
+
+    print(f"Your final hand: {User_cards}, final score: {user_score}")
+    print(f"Mr.House final hand: {Mr_House_Cards}, final score: {computer_score}")
+    print(compare(user_score,computer_score))
+
